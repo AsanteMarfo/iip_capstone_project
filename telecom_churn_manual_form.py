@@ -81,7 +81,7 @@ st.markdown('<h1 class="main-header">📱 Telecom Customer Churn Prediction</h1>
 
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
-menu_selection = st.sidebar.radio("Go to", ["OVERVIEW", "PREDICTION", "TOP FEATURES"])
+menu_selection = st.sidebar.radio("Go to", ["Overview", "Prediction", "Top Features"])
 
 # --- Page Content ---
 if menu_selection == "OVERVIEW":

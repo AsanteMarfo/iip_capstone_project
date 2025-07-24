@@ -215,7 +215,7 @@ elif menu_selection == "Top Features":
 
     if hasattr(model, 'feature_importances_'):
         feature_importances = pd.Series(model.feature_importances_, index=selected_features)
-        top_n = st.slider("Show Top N Features", 5, len(selected_features), 10)
+        top_n = st.slider("Show Top Features", 5, len(selected_features), 10)
         top_features = feature_importances.nlargest(top_n)
 
         st.subheader(f"Top {top_n} Features by Importance:")

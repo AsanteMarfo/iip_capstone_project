@@ -84,7 +84,7 @@ st.sidebar.title("Navigation")
 menu_selection = st.sidebar.radio("Go to", ["Overview", "Prediction", "Top Features"])
 
 # --- Page Content ---
-if menu_selection == "OVERVIEW":
+if menu_selection == "Overview":
     st.header("About This Application")
     st.write("""
         Welcome to the **Telecom Customer Churn Prediction** application!
@@ -104,7 +104,7 @@ if menu_selection == "OVERVIEW":
         4. **Explore 'TOP FEATURES'**: Understand which customer attributes are most influential in the churn prediction.
     """)
 
-elif menu_selection == "PREDICTION":
+elif menu_selection == "Prediction":
     st.header("Predict Customer Churn")
     st.markdown("Fill in the customer's details below to predict churn status.")
 
@@ -206,7 +206,7 @@ elif menu_selection == "PREDICTION":
         for _, row in proba_df.iterrows():
             st.markdown(f'<p class="probability-item">- **{row["Status"]}**: <span style="font-weight: bold; color: #DC143C;">{row["Probability"]:.2%}</span></p>', unsafe_allow_html=True)
 
-elif menu_selection == "TOP FEATURES":
+elif menu_selection == "Top Features":
     st.header("Top Influencing Features")
     st.write("""
         This section highlights the most important features that the model uses to make its predictions.

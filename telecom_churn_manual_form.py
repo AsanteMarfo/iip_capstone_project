@@ -252,7 +252,7 @@ elif menu_selection == "Recommendation":
              * ** Enhance electronic check payments**
     """)
     # Replace with your actual embed URL
-    st.image("https://drive.google.com/drive/u/0/folders/1FB6JCGLXOP9Cen_JpxztZGgXdGNwPlhw",caption="recommendation", use_container_width=True)
+    # st.image("https://drive.google.com/drive/u/0/folders/1FB6JCGLXOP9Cen_JpxztZGgXdGNwPlhw",caption="recommendation", use_container_width=True)
 
 # Embed the dashboard
     #components.iframe(src=powerbi_ur, width=1000, height=500, scrolling=True)

@@ -244,12 +244,12 @@ elif menu_selection == "Recommendation":
     st.header("Recommendations")
     st.write("""
              Based on the results the and feature importance we recommend the following measures to reduce customer churn:
-             * ** Incentivize Long Term Contracts**
-             * ** Investigate Fiber Optics**
-             * ** Create High value bundles**
-             * ** Provide Tech support for customers**
-             * ** Introduce and early-life loyalty packages and programmes**
-             * ** Enhance electronic check payments**
+             * **Incentivize Long Term Contracts**
+             * **Investigate Fiber Optics**
+             * **Create High value bundles**
+             * **Provide Tech support for customers**
+             * **Introduce and early-life loyalty packages and programmes**
+             * **Enhance electronic check payments**
     """)
     # Replace with your actual embed URL
     # st.image("https://drive.google.com/drive/u/0/folders/1FB6JCGLXOP9Cen_JpxztZGgXdGNwPlhw",caption="recommendation", use_container_width=True)

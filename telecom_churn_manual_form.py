@@ -246,7 +246,7 @@ elif menu_selection == "Recommendation":
              Based on the results the and feature importance we recommend the following measures to reduce customer churn
     """)
     # Replace with your actual embed URL
-    powerbi_ur = "https://app.powerbi.com/reportEmbed?reportId=a2852ac3-dd70-412b-a774-a17e32548b54&autoAuth=true&ctid=95f31300-13cc-44d5-93da-e2a04daacd7d"
+    powerbi_ur = "https://github.com/AsanteMarfo/iip_capstone_project/blob/main/.devcontainer/Recommendation.png"
 
 # Embed the dashboard
     components.iframe(src=powerbi_ur, width=1000, height=500, scrolling=True)

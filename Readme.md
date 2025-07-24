@@ -1,4 +1,6 @@
-# 📱 Telecom Customer Churn Prediction App
+# 📱 Telecom Customer Churn Prediction App: 
+
+[Telecom Customer Churn Prediction At](https://alphagroup3.streamlit.app/)
 
 This project aims to predict whether a telecom customer will **Churn**, **Stay**, or **Join**, based on various factors such as tenure, charges, internet type, contract type, and more.
 
@@ -12,7 +14,6 @@ The goal is to help telecom companies identify which customers are at risk of le
 
 - Age  
 - Number of Dependents  
-- Zip Code  
 - Number of Referrals  
 - Tenure in Months  
 - Avg Monthly Long Distance Charges  

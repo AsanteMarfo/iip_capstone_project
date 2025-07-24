@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import streamlit.components.v1 as components
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -81,7 +82,7 @@ st.markdown('<h1 class="main-header">📱 Telecom Customer Churn Prediction</h1>
 
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
-menu_selection = st.sidebar.radio("Go to", ["Overview", "Prediction", "Top Features"])
+menu_selection = st.sidebar.radio("Go to", ["Overview","Descriptive", "Prediction", "Top Features","Recommendation"])
 
 # --- Page Content ---
 if menu_selection == "Overview":
@@ -103,6 +104,19 @@ if menu_selection == "Overview":
         3. **Get Prediction**: Click the 'Predict Churn' button to see the model's prediction and confidence levels.
         4. **Explore 'TOP FEATURES'**: Understand which customer attributes are most influential in the churn prediction.
     """)
+elif menu_selection == "Descriptive":
+    st.header("Customer Churn Dashboard")
+    st.write("""
+             Welcome to the **Telecom Customer Churn Dashbord** application!
+        This Dashboard helps telecommunication companies understand the customer data know the customers who churn (leave their service), join, or stay.
+    """)
+    # Replace with your actual embed URL
+    powerbi_url = "https://app.powerbi.com/reportEmbed?reportId=fee59b6f-0e86-46ec-9fb7-c3d788880ae8&autoAuth=true&ctid=95f31300-13cc-44d5-93da-e2a04daacd7d"
+
+# Embed the dashboard
+    components.iframe(src=powerbi_url, width=1000, height=700, scrolling=True)
+
+    #st.image("https://app.powerbi.com/reportEmbed?reportId=fee59b6f-0e86-46ec-9fb7-c3d788880ae8&autoAuth=true&ctid=95f31300-13cc-44d5-93da-e2a04daacd7d", caption="Customer Churn Prediction", use_container_width=True)
 
 elif menu_selection == "Prediction":
     st.header("Predict Customer Churn")
@@ -226,8 +240,18 @@ elif menu_selection == "Top Features":
             * **Longer bars** indicate a higher importance, meaning that changes in these features have a greater impact on the model's prediction of churn, join, or stay.
             * This can help in identifying key areas for business intervention.
         """)
-    else:
-        st.warning("Feature importances are not available for this model type or have not been calculated.")
+elif menu_selection == "Recommendation":
+    st.header("Recommendations")
+    st.write("""
+             Based on the results the and feature importance we recommend the following measures to reduce customer churn
+    """)
+    # Replace with your actual embed URL
+    powerbi_ur = "https://app.powerbi.com/reportEmbed?reportId=a2852ac3-dd70-412b-a774-a17e32548b54&autoAuth=true&ctid=95f31300-13cc-44d5-93da-e2a04daacd7d"
+
+# Embed the dashboard
+    components.iframe(src=powerbi_ur, width=1000, height=500, scrolling=True)
+else:
+    st.warning("Feature importances are not available for this model type or have not been calculated.")
 
 st.markdown("---")
 st.info("💡 This is a demo application. Predictions are based on a pre-trained model and may not reflect real-world scenarios perfectly.")

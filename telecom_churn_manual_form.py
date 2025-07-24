@@ -246,10 +246,10 @@ elif menu_selection == "Recommendation":
              Based on the results the and feature importance we recommend the following measures to reduce customer churn
     """)
     # Replace with your actual embed URL
-    powerbi_ur = "https://github.com/AsanteMarfo/iip_capstone_project/blob/main/.devcontainer/Recommendation.png"
+    st.image("https://github.com/AsanteMarfo/iip_capstone_project/blob/main/.devcontainer/Recommendation.png",caption="recommendation", use_container_width=True)
 
 # Embed the dashboard
-    components.iframe(src=powerbi_ur, width=1000, height=500, scrolling=True)
+    #components.iframe(src=powerbi_ur, width=1000, height=500, scrolling=True)
 else:
     st.warning("Feature importances are not available for this model type or have not been calculated.")
 
